@@ -79,6 +79,7 @@ jobs:
     # - branch-history
 
     - stage: optional
+      if: $TRAVIS_PULL_REQUEST_BRANCH != next
       name: "branch-history"
       # need full git history for the binary/big files check
       git:
